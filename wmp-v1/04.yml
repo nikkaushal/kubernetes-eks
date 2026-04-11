@@ -142,3 +142,6 @@ spec:
     - protocol: TCP
       port: 8000  
       targetPort: 8000
+
+## Problems that we foresee now are
+# 1. Availability of pods is a problem, Since a single pod is running we anticipate availability problem
