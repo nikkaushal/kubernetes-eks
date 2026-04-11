@@ -1,5 +1,7 @@
-## Problems from 01.yml file
-# 1.Environment values are missing and hence pods were not working.
+## Problems that we have in 02.yml
+# 1. A lot of environment hardcoding to yaml file is challenge, Image having 200 inputs.
+# Solution here is use configmap and secrets. Secrets are not anyhow secrets, later we will use secret manager. For time being we will keep everything in configmap.
+
 
 apiVersion: v1
 kind: ConfigMap

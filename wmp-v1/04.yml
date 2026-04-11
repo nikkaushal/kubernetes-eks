@@ -1,5 +1,8 @@
-## Problems from 01.yml file
-# 1.Environment values are missing and hence pods were not working.
+## Problems that we have in 03.yml
+# 2. Inter communication between the services is not there.
+##  Solution: Added service to communicate internally
+# 3. Access frontend from public is also not there
+##  Solution: Added service with type LoadBalancer to Solve the problem
 
 apiVersion: v1
 kind: ConfigMap
