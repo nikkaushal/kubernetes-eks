@@ -29,11 +29,11 @@ spec:
         appName: analytics-service
     spec:
       containers:
-        - name: analytics-service
-          image: 293222827824.dkr.ecr.us-east-1.amazonaws.com/analytics-service:latest 
-          envFrom:
-            - configMapRef:
-                name: analytics-service-config
+      - name: analytics-service
+        image: 293222827824.dkr.ecr.us-east-1.amazonaws.com/analytics-service:latest 
+        envFrom:
+          - configMapRef:
+              name: analytics-service-config
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -65,13 +65,13 @@ spec:
     metadata:
       labels:
         appName: auth-service
-      spec:
-        containers:
-          - name: auth-service
-            image: 293222827824.dkr.ecr.us-east-1.amazonaws.com/auth-service:latest
-            envFrom:
-              - configMapRef:
-                  name: auth-service-config
+    spec:
+      containers:
+      - name: auth-service
+        image: 293222827824.dkr.ecr.us-east-1.amazonaws.com/auth-service:latest
+        envFrom:
+          - configMapRef:
+              name: auth-service-config
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -90,8 +90,8 @@ spec:
         appName: frontend
     spec:
       containers:
-        - name: frontend
-          image: 293222827824.dkr.ecr.us-east-1.amazonaws.com/frontend:latest
+      - name: frontend
+        image: 293222827824.dkr.ecr.us-east-1.amazonaws.com/frontend:latest
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -122,11 +122,11 @@ spec:
         appName: portfolio-service
     spec:
       containers:
-        - name: portfolio-service
-          image: 293222827824.dkr.ecr.us-east-1.amazonaws.com/portfolio-service:latest
-          envFrom:
-            - configMapRef:
-                name: portfolio-service-config
+      - name: portfolio-service
+        image: 293222827824.dkr.ecr.us-east-1.amazonaws.com/portfolio-service:latest
+        envFrom:
+          - configMapRef:
+              name: portfolio-service-config
 ---
 apiVersion: v1
 kind: Service
